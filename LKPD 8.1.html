@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Latihan 1 - Validasi Password</title>
+</head>
+<body>
+
+    <h3>Form Pendaftaran Sederhana</h3>
+    <label for="nama">Nama lengkap</label><br>
+    <input type="text" id="nama" placeholder="Nama lengkap"><br>
+
+    <label for="email">Email</label><br>
+    <input type="email" id="email" placeholder="email@contoh.com"><br>
+
+    <label for="password">Kata sandi</label><br>
+    <input type="password" id="password" placeholder="Kata sandi"><br>
+
+    <button type="button" onclick="validasi()">Daftar</button>
+
+    <script>
+        function validasi() {
+            let nama = document.getElementById("nama").value;
+            let email = document.getElementById("email").value;
+            let pass = document.getElementById("password").value;
+
+            // Pengecekan data kosong
+            if (nama === "" || email === "" || pass === "") {
+                alert("Semua field harus diisi!");
+            }
+            // Latihan 1: Pengecekan Panjang Password
+            else if (pass.length < 8) {
+                alert("Password harus minimal 8 karakter!"); // Feedback menggunakan alert
+            }
+            else {
+                alert("Pendaftaran berhasil!");
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Tebak Angka dengan Fitur Tambahan</title>
+    <style>
+        /* CSS sederhana untuk tampilan yang lebih baik */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #hasil {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Game Tebak Angka 1-10</h2>
+    
+    <input type="number" id="tebakan" placeholder="Masukkan angka 1-10">
+    <button onclick="cekTebakan()">Coba!</button>
+    <button onclick="resetGame()">Reset Game</button>
+    
+    <p id="hasil"></p>
+
+    <script>
+        let angkaBenar; // Dideklarasikan di luar agar bisa diakses oleh semua fungsi
+
+        // Fungsi untuk menginisialisasi atau mereset game
+        function resetGame() {
+            // Menghasilkan angka rahasia baru (1 sampai 10)
+            angkaBenar = Math.floor(Math.random() * 10) + 1;
+            
+            // Membersihkan input dan hasil
+            document.getElementById("tebakan").value = "";
+            document.getElementById("hasil").innerHTML = "Permainan baru dimulai. Tebak angka 1-10!";
+            
+            // Opsional: Untuk tujuan debugging, bisa dihapus
+            console.log("Angka Rahasia Baru:", angkaBenar);
+        }
+
+        // Panggil resetGame saat halaman pertama kali dimuat
+        resetGame();
+
+        function cekTebakan() {
+            let tebakanValue = document.getElementById("tebakan").value;
+            let tebakan = parseInt(tebakanValue);
+            let pesan = "";
+
+            /* * Fitur Tambahan 1: Validasi Input
+             * Memastikan input adalah angka dan berada dalam rentang 1-10
+             */
+            if (isNaN(tebakan) || tebakan < 1 || tebakan > 10) {
+                pesan = "⚠️ **Input TIDAK VALID!** Harap masukkan angka antara 1 dan 10.";
+            } 
+            
+            // Lanjutkan ke logika game jika input valid
+            else {
+                // Logika Percabangan (if-else) yang sama dengan Latihan 1
+                if (tebakan === angkaBenar) {
+                    pesan = "🎉 **Tebakan kamu BENAR!** Angka rahasia adalah " + angkaBenar + ". Klik Reset untuk main lagi.";
+                } else if (tebakan > angkaBenar) {
+                    pesan = "Terlalu besar, coba lagi!";
+                } else {
+                    pesan = "Terlalu kecil, coba lagi!";
+                }
+            }
+
+            // Menampilkan pesan hasil
+            document.getElementById("hasil").innerHTML = pesan;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Latihan JavaScript Dasar</title>
+</head>
+<body>
+  <h1>Hasil Latihan JavaScript</h1>
+  <script>
+  // 3. Buat array nilai siswa
+let nilaiSiswa = [85, 90, 78, 92, 88];
+
+let totalNilai = 0;
+
+// Menjumlahkan semua nilai menggunakan perulangan for
+for (let i = 0; i < nilaiSiswa.length; i++) {
+    totalNilai = totalNilai + nilaiSiswa[i];
+    // Atau bisa disingkat: totalNilai += nilaiSiswa[i];
+}
+
+// Menghitung rata-rata
+let jumlahData = nilaiSiswa.length;
+let rataRata = totalNilai / jumlahData;
+
+// Menampilkan hasilnya
+console.log("--- Perhitungan Nilai Siswa ---");
+console.log(`Daftar Nilai: ${nilaiSiswa}`);
+console.log(`Total Nilai: ${totalNilai}`);
+console.log(`Jumlah Siswa: ${jumlahData}`);
+console.log(`Rata-rata Nilai: ${rataRata.toFixed(2)}`); // .toFixed(2) untuk 2 desimal
+</script>
+</body>
+</html>

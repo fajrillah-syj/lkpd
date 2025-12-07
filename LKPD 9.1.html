@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Tebak Angka Dasar</title>
+</head>
+<body>
+    <h2>Game Tebak Angka 1-10</h2>
+    <input type="number" id="tebakan" placeholder="Masukkan angka 1-10">
+    <button onclick="cekTebakan()">Coba!</button>
+    
+    <p id="hasil"></p>
+
+    <script>
+        // Menghasilkan angka rahasia (1 sampai 10)
+        let angkaBenar = Math.floor(Math.random() * 10) + 1;
+
+        function cekTebakan() {
+            // Mengambil nilai tebakan dari input dan mengubahnya menjadi bilangan bulat
+            let tebakan = parseInt(document.getElementById("tebakan").value);
+            let pesan = "";
+
+            // Logika Percabangan (if-else)
+            if (tebakan === angkaBenar) {
+                pesan = "🎉 **Tebakan kamu BENAR!** 🎉";
+            } else if (tebakan > angkaBenar) {
+                pesan = "Terlalu besar, coba lagi!";
+            } else {
+                pesan = "Terlalu kecil, coba lagi!";
+            }
+
+            // Menampilkan pesan hasil di elemen dengan id="hasil"
+            document.getElementById("hasil").innerHTML = pesan;
+        }
+    </script>
+</body>
+</html>
