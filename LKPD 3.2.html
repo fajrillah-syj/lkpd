@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Latihan JavaScript Dasar</title>
+</head>
+<body>
+  <h1>Hasil Latihan JavaScript</h1>
+    <script>
+    let totalJumlah = 0; // Variabel untuk menyimpan hasil penjumlahan
+
+console.log("== Penjumlahan Bilangan Genap (2 sampai 20) ==");
+
+for (let i = 2; i <= 20; i = i + 2) {
+    // Menambahkan bilangan genap ke variabel totalJumlah
+    totalJumlah = totalJumlah + i;
+    // Tampilkan proses penjumlahan (opsional)
+    console.log(`Menambahkan: ${i}. Total sementara: ${totalJumlah}`);
+}
+
+console.log(`\n=== Hasil Akhir ===`);
+console.log(`Total jumlah bilangan genap 2 sampai 20 adalah: ${totalJumlah}`); 
+// Hasil yang benar adalah 110 (2+4+6+8+10+12+14+16+18+20)
+  </script>
+</body>
+</html>
