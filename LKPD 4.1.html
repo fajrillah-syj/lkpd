@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Latihan JavaScipt Dasar</title>
+</head>
+<body>
+  <h1>Hasil Latihan JavaScript</h1>
+    <script>
+    /**
+ * Fungsi untuk menghitung luas persegi.
+ * @param {number} sisi - Panjang sisi persegi.
+ * @returns {number} Luas persegi.
+ */
+function hitungLuasPersegi(sisi) {
+    // Rumus luas persegi: sisi * sisi
+    let luas = sisi * sisi;
+    // Mengembalikan (return) nilai luas
+    return luas;
+}
+
+// Contoh Penggunaan:
+let sisiA = 4;
+let luasA = hitungLuasPersegi(sisiA);
+console.log(`Luas persegi dengan sisi ${sisiA} adalah: ${luasA}`); // Output: 16
+
+let sisiB = 7;
+let luasB = hitungLuasPersegi(sisiB);
+console.log(`Luas persegi dengan sisi ${sisiB} adalah: ${luasB}`); // Output: 49
+    </script>
+</body>
+</html>

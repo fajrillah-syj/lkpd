@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Latihan JavaScript Dasar</title>
+</head>
+<body>
+  <h1>Hasil Latihan JavaScript</h1>
+    <script>
+    // Meminta pengguna memasukkan usia
+let usia_input = prompt("Masukkan usia Anda (angka):");
+
+// Mengubah input string menjadi angka
+let usia = parseInt(usia_input);
+
+// Melakukan percabangan if-else if-else untuk menentukan kategori usia
+if (usia < 13) {
+    // Jika usia kurang dari 13
+    alert("Kategori Usia: Anak-anak");
+} else if (usia >= 13 && usia <= 17) {
+    // Jika usia 13 sampai 17 (Remaja)
+    alert("Kategori Usia: Remaja");
+} else if (usia >= 18) {
+    // Jika usia 18 atau lebih (Dewasa)
+    alert("Kategori Usia: Dewasa");
+} else {
+    // Untuk kasus jika input bukan angka valid (optional, tapi baik untuk error handling)
+    alert("Input tidak valid. Mohon masukkan angka.");
+}
+  </script>
+</body>
+</html>
